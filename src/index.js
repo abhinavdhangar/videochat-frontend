@@ -10,9 +10,9 @@ import Du from './pages/Du';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <ContextProvider> */}
-    <Du/>
-    {/* </ContextProvider> */}
+    <ContextProvider>
+    <App/>
+    </ContextProvider>
   </React.StrictMode>
 );
 
