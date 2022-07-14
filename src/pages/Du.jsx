@@ -4,7 +4,9 @@ const Du = () => {
     const [stream, setStream] = useState();
     const myVideo = useRef();
     useEffect(() => {
-        navigator.mediaDevices.getUserMedia({ audio:true})
+        navigator.mediaDevices.getUserMedia({ audio:false,video:{
+          facingMode:'user'
+        }})
           .then((currentStream) => {
             setStream(currentStream);
     if(myVideo.current){
@@ -16,8 +18,7 @@ const Du = () => {
   return (
     <div>
         <h1>video js</h1>
-      <audio ref={myVideo} autoPlay> 
-      </audio>
+     <video ref={myVideo} playsInline  autoPlay ></video>
     </div>
   )
 }

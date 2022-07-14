@@ -1,18 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { ContextProvider } from './pages/Context';
+// import { ContextProvider } from './pages/Context';
 import Du from './pages/Du';
-import App1 from './alag/App';
+// import App1 from './alag/App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ContextProvider>
-    <App/>
-    </ContextProvider>
+    {/* <ContextProvider> */}
+    <Du/>
+    {/* </ContextProvider> */}
   </React.StrictMode>
 );
 
