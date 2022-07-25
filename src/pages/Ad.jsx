@@ -10,7 +10,7 @@ import io from "socket.io-client"
 // import "./App.css"
 
 
-const socket = io.connect('http://localhost:5000')
+const socket = io.connect('https://videochatappart2.herokuapp.com')
 function Ad() {
 	const [ me, setMe ] = useState("")
 	const [ stream, setStream ] = useState()
@@ -24,13 +24,19 @@ function Ad() {
 	const myVideo = useRef()
 	const userVideo = useRef()
 	const connectionRef= useRef()
+    const [count, setcount] = useState(0)
+
+useEffect(()=>{
+	navigator.mediaDevices.getUserMedia({ video: true, audio: false }).then((stream) => {
+		setStream(stream)
+		console.log(stream)
+			myVideo.current.srcObject = stream
+	})
+
+},[count])
 
 	useEffect(() => {
-		navigator.mediaDevices.getUserMedia({ video: true, audio: false }).then((stream) => {
-			setStream(stream)
-				myVideo.current.srcObject = stream
-		})
-
+		
 	socket.on("me", (id) => {
 			setMe(id)
 		})
@@ -153,6 +159,7 @@ function Ad() {
 				) : null}
 			</div>
 		</div>
+		<button onClick={()=>setcount(()=>count+1)}> bclic</button>
 		</>
 	)
 }
