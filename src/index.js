@@ -6,14 +6,15 @@ import reportWebVitals from './reportWebVitals';
 // import { ContextProvider } from './pages/Context';
 // import Du from './pages/Du';
 import Ad from './pages/Ad';
+import UiContextProvider from './context/UiContext';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <ContextProvider> */}
+    <UiContextProvider>
     <Ad/>
-    {/* </ContextProvider> */}
+    </UiContextProvider>
   </React.StrictMode>
 );
 
