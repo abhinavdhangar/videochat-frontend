@@ -18,8 +18,8 @@ import { UiContext } from "../context/UiContext"
 // const ringtone = new Audio("https://nf1f8200-a.akamaihd.net/downloads/ringtones/files/mp3/lily-lily-amit-bhadana-download-mp3-50462.mp3")
 // let your_name = prompt("what is your name ? ")
 let ing = "../ringtone.mp3"
-// const socket = io.connect('https://videochatappart2.herokuapp.com')
-const socket = io.connect('http://localhost:8081')
+const socket = io.connect('https://videochatappart2.herokuapp.com')
+// const socket = io.connect('http://localhost:8081')
 function Ad() {
 	const aud = useRef()
    const [play, setplay] = useState(false)
