@@ -18,14 +18,14 @@ import { UiContext } from "../context/UiContext"
 // const ringtone = new Audio("https://nf1f8200-a.akamaihd.net/downloads/ringtones/files/mp3/lily-lily-amit-bhadana-download-mp3-50462.mp3")
 // let your_name = prompt("what is your name ? ")
 let ing = "../ringtone.mp3"
-const socket = io.connect('https://videochatappart2.herokuapp.com')
-// const socket = io.connect('http://localhost:8081')
+// const socket = io.connect('https://videochatappart2.herokuapp.com')
+const socket = io.connect('http://localhost:8081')
 function Ad() {
 	const aud = useRef()
    const [play, setplay] = useState(false)
-	const {setkhud_name,khud_name,show_popup,setshow_popup} = useContext(UiContext)
+	const {setkhud_name,handleClickDisplay,khud_name,show_popup,setshow_popup,myVideo,stream ,setStream} = useContext(UiContext)
 	const [ me, setMe ] = useState("")
-	const [ stream, setStream ] = useState()
+	// const [ stream, setStream ] = useState()
 	const [ receivingCall, setReceivingCall ] = useState(false)
 	const [ caller, setCaller ] = useState("")
 	const [ callerSignal, setCallerSignal ] = useState()
@@ -33,11 +33,12 @@ function Ad() {
 	const [ idToCall, setIdToCall ] = useState("")
 	const [ callEnded, setCallEnded] = useState(false)
 	const [ name, setName ] = useState("")
-	const myVideo = useRef()
+	// const myVideo = useRef()
 	const userVideo = useRef()
 	const connectionRef= useRef()
     const [count, setcount] = useState(0)
     const [all_users, setall_users] = useState([])
+	const [sender_name, setsender_name] = useState('')
   useEffect(()=>{
 	    if(Cookies.get("name")){
 		setName(Cookies.get("name"))
@@ -53,16 +54,11 @@ useEffect(()=>{
 
 },[count])
 
+
 	useEffect(() => {
 	
 
-		navigator.mediaDevices.getUserMedia({ video: true, audio: true }).then((stream) => {
-			setStream(stream)
-			
-			console.log(stream)
-				myVideo.current.srcObject = stream
-		})
-
+		
 
 		
 	socket.on("me", (id) => {
@@ -81,6 +77,7 @@ useEffect(()=>{
 			setReceivingCall(true)
 			setCaller(data.from)
 			setName(data.name)
+			setsender_name(data.name)
 			console.log('chalna chahiye gaana')
 			// ringtone.play()
 			// setringtone(ing)
@@ -140,9 +137,14 @@ useEffect(()=>{
 
 	const leaveCall = () => {
 		setCallEnded(true)
-		connectionRef.current.destroy()
-	}
 
+		connectionRef.current.destroy()
+	window.location.reload()
+	}
+const handleDismiss = (id)=>{
+	setCallEnded(true)
+	window.location.reload()
+}
 	return (
 		<div>
 			<audio ref={aud} >
@@ -158,7 +160,7 @@ useEffect(()=>{
 				</div>
 				<div className="video">
 					{callAccepted && !callEnded ?
-					<video playsInline ref={userVideo} autoPlay style={{ width: "300px"}} />:
+					<video controls playsInline className=""  ref={userVideo} autoPlay style={{ width: "300px"}} />:
 					null}
 				</div>
 			</div>
@@ -192,10 +194,11 @@ useEffect(()=>{
 			<div>
 				{receivingCall && !callAccepted ? (
 						<div className="caller">
-						<h1 >{name} is calling...</h1>
+						<h1 >{sender_name} is calling...</h1>
 						<button className="border-2 border-black" onClick={answerCall}>
 							Answer
 						</button>
+						<button onClick={()=>handleDismiss()} className="border-2 border-black">dismiss</button>
 					</div>
 				) : null}
 			</div>
@@ -215,6 +218,7 @@ useEffect(()=>{
   ))
 
 }</div>
+<button onClick={handleClickDisplay}>get display</button>
 		</div>
 	)
 	}

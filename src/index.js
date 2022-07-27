@@ -5,15 +5,17 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 // import { ContextProvider } from './pages/Context';
 // import Du from './pages/Du';
-import Ad from './pages/Ad';
+// import Ad from './pages/Ad';
 import UiContextProvider from './context/UiContext';
+import Dad from './pages/Dad';
+import Mad from './pages/Mad';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <UiContextProvider>
-    <Ad/>
+    <Dad/>
     </UiContextProvider>
   </React.StrictMode>
 );
