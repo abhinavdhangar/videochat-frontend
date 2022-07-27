@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState,useContext } from "react"
-// import ingtone from '../ringtone.mp3'
+import ingtone from '../nigga.mp3'
 // import "./App.css"
 
 import Cookies from 'js-cookie'
@@ -14,9 +14,9 @@ function Ad() {
 const {aud,callAccepted,caller,handleDismiss,callEnded,idToCall,hasDismissed,setIdToCall,callUser,userVideo,receivingCall,count,setcount,sender_name,leaveCall,answerCall,me,all_users,handleClickDisplay,} = useContext(UiContext)
 	return (
 		<div>
-			{/* <audio ref={aud} >
+			<audio ref={aud} >
 				<source  src={ingtone} />
-			</audio> */}
+			</audio>
 			{Cookies.get("name")?(		<div>
 			<h1 style={{ textAlign: "center"}}>Zoomish</h1>
 					<button onClick={()=>setcount(()=>count+1)}> Refresh</button>
