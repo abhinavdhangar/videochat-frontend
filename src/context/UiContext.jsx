@@ -23,7 +23,7 @@ const UiContextProvider = (props) => {
  },[])
 
  const handleClickDisplay =()=>{
-	navigator.mediaDevices.getDisplayMedia({ video: true, audio: false }).then((stream) => {
+	navigator.mediaDevices.getDisplayMedia({ video: true, audio: true }).then((stream) => {
 		setStream(stream)
 		console.log(stream)
 			myVideo.current.srcObject = stream
@@ -54,7 +54,7 @@ useEffect(()=>{
 
 },[])
 useEffect(()=>{
-navigator.mediaDevices.getUserMedia({ video: true, audio: false }).then((stream) => {
+navigator.mediaDevices.getUserMedia({ video: true, audio: true }).then((stream) => {
  setStream(stream)
  console.log(stream)
    myVideo.current.srcObject = stream
