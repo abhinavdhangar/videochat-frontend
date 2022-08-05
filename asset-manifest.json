@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/new/static/css/main.5554d530.css",
-    "main.js": "/new/static/js/main.166bf263.js",
-    "static/js/787.39bb0775.chunk.js": "/new/static/js/787.39bb0775.chunk.js",
-    "static/media/suzume.mp4": "/new/static/media/suzume.0a27e08ef5eac7bd09ad.mp4",
-    "index.html": "/new/index.html",
-    "static/media/nigga.mp3": "/new/static/media/nigga.31d6cfe0d16ae931b73c.mp3",
-    "main.5554d530.css.map": "/new/static/css/main.5554d530.css.map",
-    "main.166bf263.js.map": "/new/static/js/main.166bf263.js.map",
-    "787.39bb0775.chunk.js.map": "/new/static/js/787.39bb0775.chunk.js.map"
+    "main.css": "/videchat-frontend/static/css/main.fd4b1aa5.css",
+    "main.js": "/videchat-frontend/static/js/main.3919c16e.js",
+    "static/js/787.39bb0775.chunk.js": "/videchat-frontend/static/js/787.39bb0775.chunk.js",
+    "static/media/suzume.mp4": "/videchat-frontend/static/media/suzume.0a27e08ef5eac7bd09ad.mp4",
+    "index.html": "/videchat-frontend/index.html",
+    "static/media/nigga.mp3": "/videchat-frontend/static/media/nigga.31d6cfe0d16ae931b73c.mp3",
+    "main.fd4b1aa5.css.map": "/videchat-frontend/static/css/main.fd4b1aa5.css.map",
+    "main.3919c16e.js.map": "/videchat-frontend/static/js/main.3919c16e.js.map",
+    "787.39bb0775.chunk.js.map": "/videchat-frontend/static/js/787.39bb0775.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5554d530.css",
-    "static/js/main.166bf263.js"
+    "static/css/main.fd4b1aa5.css",
+    "static/js/main.3919c16e.js"
   ]
 }
