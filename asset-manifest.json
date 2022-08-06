@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/videochat-frontend/static/css/main.cc2bbd91.css",
-    "main.js": "/videochat-frontend/static/js/main.443820c8.js",
+    "main.css": "/videochat-frontend/static/css/main.fa3c7569.css",
+    "main.js": "/videochat-frontend/static/js/main.2905a90b.js",
     "static/js/787.39bb0775.chunk.js": "/videochat-frontend/static/js/787.39bb0775.chunk.js",
     "static/media/suzume.mp4": "/videochat-frontend/static/media/suzume.0a27e08ef5eac7bd09ad.mp4",
     "index.html": "/videochat-frontend/index.html",
     "static/media/nigga.mp3": "/videochat-frontend/static/media/nigga.31d6cfe0d16ae931b73c.mp3",
-    "main.cc2bbd91.css.map": "/videochat-frontend/static/css/main.cc2bbd91.css.map",
-    "main.443820c8.js.map": "/videochat-frontend/static/js/main.443820c8.js.map",
+    "main.fa3c7569.css.map": "/videochat-frontend/static/css/main.fa3c7569.css.map",
+    "main.2905a90b.js.map": "/videochat-frontend/static/js/main.2905a90b.js.map",
     "787.39bb0775.chunk.js.map": "/videochat-frontend/static/js/787.39bb0775.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cc2bbd91.css",
-    "static/js/main.443820c8.js"
+    "static/css/main.fa3c7569.css",
+    "static/js/main.2905a90b.js"
   ]
 }
